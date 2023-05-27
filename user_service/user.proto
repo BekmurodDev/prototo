@@ -1,0 +1,55 @@
+syntax="proto3";
+
+package user_service;
+option go_package="genproto/user_service";
+
+
+
+message User {
+    string id = 1;
+    string name = 2;
+    string phone = 3;
+    string gmail = 4;
+    string age = 5;
+    string deleted_at = 6;
+    string gender = 7;
+    string about = 8;
+}
+
+
+message UserCreateOrUpdate {
+    string name = 1;
+    string phone = 2;
+    string gmail = 3;
+    string age = 4;
+    string deleted_at = 5;
+    string gender = 6;
+    string about = 7;
+}
+
+
+message UserArray {
+    repeated User user = 1;
+}
+
+
+message Action {
+    string anction = 1;
+}
+
+
+message Query {
+    int64 offset =1;
+    int64 limit = 2;
+}
+
+
+
+
+message Pkey {
+    string id = 1;
+}
+
+
+
+

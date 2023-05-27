@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package user_service;
+option go_package="genproto/user_service";
+import "user.proto";
+
+service UserCrud{
+    rpc GetById(Pkey) returns(User);
+    rpc GetList(Query) returns(UserArray);
+    rpc Create(UserCreateOrUpdate) returns(Action);
+    rpc Update(UserCreateOrUpdate) returns(Action);
+    rpc Delete(Pkey) returns(Action);
+};
